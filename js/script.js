@@ -7,7 +7,7 @@ button.addEventListener("click", function(){
     const passwordValue = password.value;
     
     if(emailValue === "shanin" && passwordValue === "45102"){
-        return window.location.href = "index2.html";
+        return window.location.href = "html/index2.html";
     }
     else{
         return alert("incorrect email or password");
