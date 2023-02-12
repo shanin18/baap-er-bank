@@ -4,45 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>বাপের ব্যাংক</title>
+    <title>Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <h1 class="text-5xl text-center mt-4">Welcome to <span class="text-red-500 font-semibold">বাপ-এর-ব্যাংক</span>!!!</h1>
-    </header>
-    <main class="container mx-auto">
-        <div class="grid md:grid-cols-3 gap-4 mt-8">
-            <div class="bg-yellow-400 p-8 rounded-xl">
-                <h2 class="text-white text-3xl">মোট রাখা হইছে</h2>
-                <h2 class="text-white font-semibold text-5xl">$<span id="deposit-amount">00</span></h2>
-            </div>
-            <div class="bg-red-400 p-8 rounded-xl">
-                <h2 class="text-white text-3xl">মোট তোলা হইছে</h2>
-                <h2 class="text-white font-semibold text-5xl">$<span id="withdraw-amount">00</span></h2>
-            </div>
-            <div class="bg-blue-400 p-8 rounded-xl">
-                <h2 class="text-white text-3xl">তর এখন মোট টাকা আছে</h2>
-                <h2 class="text-white font-semibold text-5xl">$<span id="balance-amount">00</span></h2>
-            </div>
-        </div>
-        <div class="grid md:grid-cols-2 mt-8 gap-4">
-            <div class="bg-purple-400 p-8 rounded-xl">
-                <h2 class="text-4xl text-white mb-4">টাকা রাখ</h2>
-                <input class="w-3/4 block mb-4 p-4 rounded" id="deposit-input" type="number" placeholder="৳ কত রাখবি?">
-                <button class="font-semibold bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-800" id="btn-deposit">Deposit</button>
-            </div>
-            <div class="bg-lime-400 p-8 rounded-xl">
-                <h2 class="text-4xl text-white mb-4">টাকা তোল</h2>
-                <input class="w-3/4 block mb-4 p-4 rounded" id = "withdraw-input" type="number" placeholder="৳ কত তুলবি?">
-                <button id="btn-withdraw" class="font-semibold bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-800">Withdraw</button>
-            </div>
-        </div>
-    </main>
-    <footer class="mt-16 text-center mb-8">
-        <h3>&copy;কপিরাইট @শানিন ভাই ২০২৩<br>চুরি করলে খবর আছে</h3>
-    </footer>
-    <script src="deposit.js"></script>
-    <script src="withdraw.js"></script>
+<body class="flex justify-center items-center h-screen">
+    <div class="p-8 bg-blue-400 w-3/12 shadow-2xl">
+        <h2 class="text-3xl text-white font-semibold">PleaseLogin</h2>
+        <input class="block p-4 border w-full mt-4 rounded" id="email" type="email" placeholder="ই-মেইল হান্দা">
+        <input class="block p-4 border w-full mt-4 rounded" id="password" type="password" placeholder="পাসওয়ার্ড হান্দা">
+        <button class="text-white font-semibold bg-green-400 mt-4 w-full py-4 text-xl rounded" id="btn-login">Login</button>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
