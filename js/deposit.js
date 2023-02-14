@@ -1,23 +1,18 @@
-const depositInput = document.getElementById("deposit-input");
-const depositAmount = document.getElementById("deposit-amount");
-const balanceAmount = document.getElementById("balance-amount");
-
-const btnDeposit = document.getElementById("btn-deposit");
-
-
-
-btnDeposit.addEventListener("click", function () {
-    const depositInputToNumber = parseFloat(depositInput.value);
-    depositInput.value = "";
-    if(isNaN(depositInputToNumber)){
-        alert("একটা সংখ্যা ঢুকা আগে")
+document.getElementById("btn-deposit").addEventListener("click",function(){
+    const newDepositValue = inputFieldValue("deposit-input");
+    if(isNaN(newDepositValue)){
+        alert("টাকার সংখ্যা ঢুকা আগে");
         return;
     }
-    const depositAmountToNumber = parseFloat(depositAmount.innerText);
-    const totalDepositAmount = depositInputToNumber + depositAmountToNumber;
-    depositAmount.innerText = totalDepositAmount;
+    else if(newDepositValue < 0){
+        alert("ভাই নেগেটিভ সংখ্যা দেছ ক্যান?");
+    }
+    const previousDepositValue = elementValue("deposit-amount");
+    const totalDeposit = newDepositValue + previousDepositValue;
+    setInnerText("deposit-amount", totalDeposit);
 
-    const balanceAmountToNumber = parseFloat(balanceAmount.innerText);
-    balanceAmount.innerText = balanceAmountToNumber + depositInputToNumber;
+    const balanceAmount = elementValue("balance-amount");
+    const totalBalance = newDepositValue + balanceAmount;
+    setInnerText("balance-amount", totalBalance);
+
 });
-
