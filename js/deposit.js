@@ -6,6 +6,7 @@ document.getElementById("btn-deposit").addEventListener("click",function(){
     }
     else if(newDepositValue < 0){
         alert("ভাই নেগেটিভ সংখ্যা দেছ ক্যান?");
+        return;
     }
     const previousDepositValue = elementValue("deposit-amount");
     const totalDeposit = newDepositValue + previousDepositValue;
